@@ -29,7 +29,28 @@ namespace University_Clinic_Hospital
             employeeList.Add(Sue);
             employeeList.Add(Peter);
         }
-        
+
+        //stretch: use GetType() to get type, then convert output of GetType() to usable format in switch case
+        public void listEmployees()
+        {
+            foreach (Employee employee in employeeList)
+            {
+                Console.WriteLine($"{employee.Name} {employee.EmployeeNumber} {employee.SalaryPaid}");
+            }
+            //foreach (Nurse nurse in employeeList)
+            //{
+            //    Console.WriteLine($"{nurse.Name} {nurse.EmployeeNumber} {nurse.SalaryPaid}");
+            //}
+            //foreach (Receptionist receptionist in employeeList)
+            //{
+            //    Console.WriteLine($"{receptionist.Name} {receptionist.EmployeeNumber} {receptionist.SalaryPaid}");
+            //}
+            //foreach (Janitor janitor in employeeList)
+            //{
+            //    Console.WriteLine($"{janitor.Name} {janitor.EmployeeNumber} {janitor.SalaryPaid}");
+            //}
+
+        }
 
     }
 }

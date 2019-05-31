@@ -6,7 +6,9 @@ namespace University_Clinic_Hospital
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Hospital hospital = new Hospital();
+            hospital.addEmployeesToList();
+            hospital.listEmployees();
         }
     }
 }
