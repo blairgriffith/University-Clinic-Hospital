@@ -7,10 +7,14 @@ namespace University_Clinic_Hospital
     class Doctor : Employee
     {
         public string Specialty { get; set; }
-        public Doctor(string specialty) : base("", 0)
-        {
-            Specialty = specialty;
 
+        public Doctor(string name, int employeeNumber, string specialty) : base(false)
+        {
+            Name = name;
+            EmployeeNumber = employeeNumber;
+            Salary = "$90,000";
+            Specialty = specialty;
         }
+        
     }
 }

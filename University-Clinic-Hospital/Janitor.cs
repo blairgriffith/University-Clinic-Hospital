@@ -4,12 +4,15 @@ using System.Text;
 
 namespace University_Clinic_Hospital
 {
-    class Janitor : Employee
+    public class Janitor : Employee
     {
         public bool Sweeping { get; set; }
-        public Janitor(bool sweeping) : base("", 0)
+        public Janitor(string name, int employeeNumber) : base(false)
         {
-            Sweeping = sweeping;
+            Name = name;
+            EmployeeNumber = employeeNumber;
+            Salary = "$40,000";
+            Sweeping = false;
         }
 
     }

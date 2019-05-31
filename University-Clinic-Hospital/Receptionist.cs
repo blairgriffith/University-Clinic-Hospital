@@ -4,11 +4,14 @@ using System.Text;
 
 namespace University_Clinic_Hospital
 {
-    class Receptionist : Employee
+    public class Receptionist : Employee
     {
         public bool OnPhone { get; set; }
-        public Receptionist(bool onPhone) : base("", 0)
+        public Receptionist(string name, int employeeNumber, bool onPhone = false) : base(false)
         {
+            Name = name;
+            EmployeeNumber = employeeNumber;
+            Salary = "$45,000";
             OnPhone = onPhone;
         }
 
