@@ -32,12 +32,11 @@ namespace University_Clinic_Hospital
         Patient gerald = new Patient();
         Patient geraldine = new Patient();
         
-        public void AddPatientsToList() 
+        public void AddPatientsToList()
         {
             patientList.Add(gerald);
             patientList.Add(geraldine);
         }
-
 
         //stretch: use GetType() to get type, then convert output of GetType() to usable format in switch case
         public void ListEmployees()
@@ -63,15 +62,17 @@ namespace University_Clinic_Hospital
 
         public void PayEmployees()
         {
-            foreach (Employee employee in employeeList)
-            if(employee.SalaryPaid == false)
+            if (employeeList[0].SalaryPaid == true)
             {
-                employee.SalaryPaid = true;
-                Console.WriteLine("Employees have been paid.");
+                Console.WriteLine("Employees have already been paid.\n");
             }
             else
             {
-                Console.WriteLine("Employees have already been paid.");
+                foreach (Employee employee in employeeList)
+                {
+                    employee.SalaryPaid = true;
+                }
+                Console.WriteLine("Employees have been paid.\n");
             }
         }
 

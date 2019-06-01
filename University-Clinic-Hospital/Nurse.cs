@@ -18,12 +18,12 @@ namespace University_Clinic_Hospital
         
         public override void DrawBlood(Patient patient)
         {
-
+            patient.BloodLevel -= 5;
         }
 
         public override void CareForPatient(Patient patient)
         {
-
+            patient.HealthLevel += 7;
         }
     }
 }

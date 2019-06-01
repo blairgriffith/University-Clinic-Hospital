@@ -19,7 +19,12 @@ namespace University_Clinic_Hospital
 
         public void DrawBlood(Patient patient)
         {
-            patient.BloodLevel -= 5;
+            patient.BloodLevel -= 2;
+        }
+
+        public void CareForPatient(Patient patient)
+        {
+            patient.HealthLevel += 3;
         }
     }
 }

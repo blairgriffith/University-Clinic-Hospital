@@ -8,6 +8,9 @@ namespace University_Clinic_Hospital
         {
             Hospital hospital = new Hospital();
             bool running = true;
+            hospital.AddEmployeesToList();
+            hospital.AddPatientsToList();
+
             Console.WriteLine("Welcome to University Clinic Hospital");
             do
             {
