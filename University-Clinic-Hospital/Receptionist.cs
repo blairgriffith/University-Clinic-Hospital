@@ -7,12 +7,13 @@ namespace University_Clinic_Hospital
     public class Receptionist : Employee
     {
         public bool OnPhone { get; set; }
-        public Receptionist(string name, int employeeNumber, bool onPhone = false) : base()
+        public Receptionist(string name, int employeeNumber) : base()
         {
             Name = name;
+            Type = "Receptionist";
             EmployeeNumber = employeeNumber;
             Salary = "$45,000";
-            OnPhone = onPhone;
+            OnPhone = false;
         }
 
     }

@@ -6,13 +6,13 @@ namespace University_Clinic_Hospital
 {
     public class Patient
     {
-        int BloodLevel { get; set; }
-        int HealthLevel { get; set; }
+        public int BloodLevel { get; set; }
+        public int HealthLevel { get; set; }
 
-        public Patient(int bloodLevel, int healthLevel)
+        public Patient()
         {
-            BloodLevel = bloodLevel;
-            HealthLevel = healthLevel;
+            BloodLevel = 20;
+            HealthLevel = 10;
         }
     }
 }

@@ -11,10 +11,15 @@ namespace University_Clinic_Hospital
         public Doctor(string name, int employeeNumber, string specialty) : base()
         {
             Name = name;
+            Type = "Doctor";
             EmployeeNumber = employeeNumber;
             Salary = "$90,000";
             Specialty = specialty;
         }
-        
+
+        public void DrawBlood(Patient patient)
+        {
+            patient.BloodLevel -= 5;
+        }
     }
 }

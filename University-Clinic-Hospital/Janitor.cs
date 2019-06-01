@@ -10,6 +10,7 @@ namespace University_Clinic_Hospital
         public Janitor(string name, int employeeNumber) : base()
         {
             Name = name;
+            Type = "Janitor";
             EmployeeNumber = employeeNumber;
             Salary = "$40,000";
             Sweeping = false;
