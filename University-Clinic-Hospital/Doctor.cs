@@ -8,7 +8,7 @@ namespace University_Clinic_Hospital
     {
         public string Specialty { get; set; }
 
-        public Doctor(string name, int employeeNumber, string specialty) : base(false)
+        public Doctor(string name, int employeeNumber, string specialty) : base()
         {
             Name = name;
             EmployeeNumber = employeeNumber;

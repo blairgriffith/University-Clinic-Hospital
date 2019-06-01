@@ -7,8 +7,10 @@ namespace University_Clinic_Hospital
         static void Main(string[] args)
         {
             Hospital hospital = new Hospital();
-            hospital.addEmployeesToList();
-            hospital.listEmployees();
+            hospital.AddEmployeesToList();
+            hospital.ListEmployees();
+            //hospital.PayEmployees();
+            hospital.ListEmployees();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace University_Clinic_Hospital
         public string Salary { get; set; }
         public bool SalaryPaid { get; set; }
 
-        public Employee (bool salaryPaid)
+        public Employee ()
         {
             SalaryPaid = false;
         }

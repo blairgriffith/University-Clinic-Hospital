@@ -18,7 +18,7 @@ namespace University_Clinic_Hospital
         Receptionist Sue = new Receptionist("Sue",21640);
         Receptionist Peter = new Receptionist("Peter",59203);
 
-        public void addEmployeesToList()
+        public void AddEmployeesToList()
         {
             employeeList.Add(Harold);
             employeeList.Add(Roberta);
@@ -31,7 +31,7 @@ namespace University_Clinic_Hospital
         }
 
         //stretch: use GetType() to get type, then convert output of GetType() to usable format in switch case
-        public void listEmployees()
+        public void ListEmployees()
         {
             foreach (Employee employee in employeeList)
             {
@@ -50,6 +50,21 @@ namespace University_Clinic_Hospital
             //    Console.WriteLine($"{janitor.Name} {janitor.EmployeeNumber} {janitor.SalaryPaid}");
             //}
 
+        }
+
+        public void PayEmployees(Employee employee)
+        {
+            
+                if(employee.SalaryPaid == false)
+                {
+                    employee.SalaryPaid = true;
+                    Console.WriteLine("Employees have been paid.");
+                }
+                else
+                {
+                    Console.WriteLine("Employees have already been paid.");
+                }
+            
         }
 
     }
