@@ -11,7 +11,7 @@ namespace University_Clinic_Hospital
         public Doctor(string name, int employeeNumber, string specialty) : base()
         {
             Name = name;
-            Type = "Doctor";
+            Type = "Doctor      ";
             EmployeeNumber = employeeNumber;
             Salary = "$90,000";
             Specialty = specialty;
@@ -25,10 +25,10 @@ namespace University_Clinic_Hospital
             base.DrawBlood(patient);
         }
 
-        public override void CareForPatient(Patient patient)
+        public override void CareForPatient(Patient patient, Employee employee)
         {
             patient.HealthLevel += 3;
-            base.CareForPatient(patient);
+            base.CareForPatient(patient, employee);
         }
     }
 }

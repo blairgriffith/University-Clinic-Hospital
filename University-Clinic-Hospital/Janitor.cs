@@ -6,27 +6,28 @@ namespace University_Clinic_Hospital
 {
     public class Janitor : Employee
     {
-        public bool Sweeping { get; set; }
         public Janitor(string name, int employeeNumber) : base()
         {
             Name = name;
-            Type = "Janitor";
+            Type = "Janitor     ";
             EmployeeNumber = employeeNumber;
             Salary = "$40,000";
-            Sweeping = false;
+            Working = false;
         }
 
-        public void ChangeSweepingBehavior(Employee selectedJanitor)
+        public override void ChangeWorking(Employee selectedJanitor)
         {
-            if (selectedJanitor.Sweeping == false)
+            if (selectedJanitor.Working == false)
             {
-                selectedJanitor.Sweeping = true;
-                Console.WriteLine($"{selectedJanitor.Name} is now sweeping.");
+                selectedJanitor.Working = true;
+                string trimmedName = selectedJanitor.Name.Trim(' ');
+                Console.WriteLine($"{trimmedName} is now sweeping.\n");
             }
-            else if (selectedJanitor.Sweeping == true)
+            else if (selectedJanitor.Working == true)
             {
-                selectedJanitor.Sweeping = false;
-                Console.WriteLine($"{selectedJanitor.Name} has stopped sweeping.");
+                selectedJanitor.Working = false;
+                string trimmedName = selectedJanitor.Name.Trim(' ');
+                Console.WriteLine($"{trimmedName} has stopped sweeping.\n");
             }
         }
 

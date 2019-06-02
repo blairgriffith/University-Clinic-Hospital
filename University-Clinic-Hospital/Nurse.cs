@@ -6,14 +6,13 @@ namespace University_Clinic_Hospital
 {
     public class Nurse : MedicalEmployee
     {
-        public int NumberOfPatients { get; set; }
-        public Nurse(string name, int employeeNumber, int numberOfPatients) : base()
+        public Nurse(string name, int employeeNumber) : base()
         {
             Name = name;
-            Type = "Nurse";
+            Type = "Nurse       ";
             EmployeeNumber = employeeNumber;
             Salary = "$50,000";
-            NumberOfPatients = numberOfPatients;
+            NumberofPatients = 0;
         }
         
         public override void DrawBlood(Patient patient)
@@ -22,14 +21,16 @@ namespace University_Clinic_Hospital
             base.DrawBlood(patient);
         }
 
-        public override void CareForPatient(Patient patient)
+        public override void CareForPatient(Patient patient, Employee employee)
         {
             patient.HealthLevel += 7;
-            if (NumberOfPatients < 2)
+            if (employee.NumberofPatients < 2)
             {
-                NumberOfPatients++;
-                base.CareForPatient(patient);
+                employee.NumberofPatients++;
+                base.CareForPatient(patient, employee);
             }
+            string trimmed = employee.Name.Trim(' ');
+            Console.WriteLine($"{trimmed} is now taking care of {employee.NumberofPatients} patients.");
         }
     }
 }

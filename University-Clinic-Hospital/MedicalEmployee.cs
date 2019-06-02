@@ -6,11 +6,13 @@ namespace University_Clinic_Hospital
 {
     public abstract class MedicalEmployee : Employee
     {
+        
+
         public virtual void DrawBlood(Patient patient)
         {
             Console.WriteLine($"The patient's blood level is now {patient.BloodLevel}");
         }
-        public virtual void CareForPatient(Patient patient)
+        public virtual void CareForPatient(Patient patient, Employee employee)
         {
             Console.WriteLine($"The patient's health is now {patient.HealthLevel}");
         }

@@ -6,8 +6,9 @@ namespace University_Clinic_Hospital
     {
         static void Main(string[] args)
         {
+            Console.SetWindowSize(105, 30);
             Doctor doctor = new Doctor("", 0, "");
-            Nurse nurse = new Nurse("", 0, 0); ;
+            Nurse nurse = new Nurse("", 0); ;
             Receptionist receptionist = new Receptionist("", 0);
             Janitor janitor = new Janitor("", 0);
             Patient patient = new Patient("");
@@ -17,6 +18,15 @@ namespace University_Clinic_Hospital
             hospital.AddPatientsToList();
 
             Console.WriteLine("Welcome to University Clinic Hospital");
+            Console.WriteLine("                                                                                                     ");
+            Console.WriteLine("   ###    ###  #####   ###  ###  ###   ###  ########  ########   ######    ###   #######  ###     ###");
+            Console.WriteLine("   ###    ###  ######  ###  ###  ###   ###  ########  ###   ##  ########   ###   #######   ###   ### ");
+            Console.WriteLine("   ###    ###  ### ### ###  ###  ###   ###  ###       ###   ##  ##         ###     ###      #######  ");
+            Console.WriteLine("   ###    ###  ### ### ###  ###   ### ###   ######    #######   ########   ###     ###        ###    ");
+            Console.WriteLine("   ###    ###  ###  ######  ###    ## ##    ###       ########        ###  ###     ###        ###    ");
+            Console.WriteLine("    ########   ###   #####  ###     ###     ########  ###   ##  ########   ###     ###        ###    ");
+            Console.WriteLine("     #####     ###     ###  ###      #      ########  ###   ##   #####     ###     ###        ###    ");
+            Console.WriteLine("\n                             Clinic Hospital Employee Management Software\n\n");
             do
             {
                 Console.WriteLine("Please choose one of the following options:\n");
@@ -38,35 +48,36 @@ namespace University_Clinic_Hospital
                         hospital.ListPatients();
                         break;
                     case 4:
-                        switch (hospital.ChooseEmployee().Type)
+                        var chosenEmployee = hospital.ChooseEmployee();
+                        switch (chosenEmployee.Type)
                         {
-                            case "Doctor":
+                            case "Doctor      ":
                                 switch (doctor.ChooseCare())
                                 {
                                     case 1:
                                         doctor.DrawBlood(hospital.ChoosePatient());
                                         break;
                                     case 2:
-                                        doctor.CareForPatient(hospital.ChoosePatient());
+                                        doctor.CareForPatient(hospital.ChoosePatient(), chosenEmployee);
                                         break;
                                 }
                                 break;
-                            case "Nurse":
+                            case "Nurse       ":
                                 switch (nurse.ChooseCare())
                                 {
                                     case 1:
                                         nurse.DrawBlood(hospital.ChoosePatient());
                                         break;
                                     case 2:
-                                        nurse.CareForPatient(hospital.ChoosePatient());
+                                        nurse.CareForPatient(hospital.ChoosePatient(), chosenEmployee);
                                         break;
                                 }
                                 break;
                             case "Receptionist":
-                                receptionist.EndPhoneCall(receptionist);
+                                receptionist.ChangeWorking(chosenEmployee);
                                 break;
-                            case "Janitor":
-                                janitor.ChangeSweepingBehavior(janitor);
+                            case "Janitor     ":
+                                janitor.ChangeWorking(chosenEmployee);
                                 break;
                         }
                         break;

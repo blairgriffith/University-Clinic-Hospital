@@ -7,43 +7,45 @@ namespace University_Clinic_Hospital
     public class Hospital
     {
         public List<Employee> employeeList = new List<Employee>();
-        Doctor harold = new Doctor("Harold",34120,"Heart");
-        Doctor roberta = new Doctor("Roberta",45012,"Brain");
-        Nurse cindy = new Nurse("Cindy",59333,0);
-        Nurse robert = new Nurse("Robert",90210,0);
-        Janitor doug = new Janitor("Doug",86753);
-        Janitor joan = new Janitor("Joan",44074);
-        Receptionist sue = new Receptionist("Sue",21640);
-        Receptionist peter = new Receptionist("Peter",59203);
+        Doctor doc1 = new Doctor("Harold  ",341205,"Heart");
+        Doctor doc2 = new Doctor("Roberta ",450123,"Brain");
+        Nurse nurse1 = new Nurse("Cindy   ",593331);
+        Nurse nurse2 = new Nurse("Robert  ",902100);
+        Janitor jan1 = new Janitor("Doug    ",867530);
+        Janitor jan2 = new Janitor("Joan    ",440740);
+        Receptionist recep1 = new Receptionist("Sue     ",216440);
+        Receptionist recep2 = new Receptionist("Peter   ",592031);
 
         public void AddEmployeesToList()
         {
-            employeeList.Add(harold);
-            employeeList.Add(roberta);
-            employeeList.Add(cindy);
-            employeeList.Add(robert);
-            employeeList.Add(doug);
-            employeeList.Add(joan);
-            employeeList.Add(sue);
-            employeeList.Add(peter);
+            employeeList.Add(doc1);
+            employeeList.Add(doc2);
+            employeeList.Add(nurse1);
+            employeeList.Add(nurse2);
+            employeeList.Add(jan1);
+            employeeList.Add(jan2);
+            employeeList.Add(recep1);
+            employeeList.Add(recep2);
         }
         
         public List<Patient> patientList = new List<Patient>();
-        Patient gerald = new Patient("Gerald");
-        Patient geraldine = new Patient("Geraldine");
+        Patient patient1 = new Patient("Gerald   ");
+        Patient patient2 = new Patient("Geraldine");
         
         public void AddPatientsToList()
         {
-            patientList.Add(gerald);
-            patientList.Add(geraldine);
+            patientList.Add(patient1);
+            patientList.Add(patient2);
         }
 
         //stretch: use GetType() to get type, then convert output of GetType() to usable format in switch case
         public void ListEmployees()
         {
+            Console.WriteLine("Name     | Type         | Number | Salary  | Paid?");
+            Console.WriteLine("---------|--------------|--------|---------|------");
             foreach (Employee employee in employeeList)
             {
-                Console.WriteLine($"{employee.Name} {employee.Type} {employee.EmployeeNumber} {employee.Salary} {employee.SalaryPaid}");
+                Console.WriteLine($"{employee.Name} | {employee.Type} | {employee.EmployeeNumber} | {employee.Salary} | {employee.SalaryPaid}");
             }
             //foreach (Nurse nurse in employeeList)
             //{
@@ -62,13 +64,17 @@ namespace University_Clinic_Hospital
 
         public void ListPatients()
         {
+            Console.WriteLine("Name       | Health Level | Blood Level ");
+            Console.WriteLine("-----------|--------------|-------------");
             foreach (Patient patient in patientList)
             {
-                Console.WriteLine($" {patient.Name} {patient.HealthLevel} {patient.BloodLevel}");
+                Console.WriteLine($" {patient.Name} | {patient.HealthLevel}           | {patient.BloodLevel}");
    
             }
             Console.WriteLine("\n");
         }
+
+
         public void PayEmployees()
         {
             if (employeeList[0].SalaryPaid == true)
@@ -88,15 +94,14 @@ namespace University_Clinic_Hospital
 
         public Employee ChooseEmployee()
         {
-            Console.WriteLine("Please select an employee from the list:");
+            Console.WriteLine("\nPlease select an employee from the list:");
             int e = 0;
             foreach (Employee item in employeeList)
             {
                 e++;
-                Console.WriteLine($"{e}. {item.Name}");
+                Console.WriteLine($"{e}. {item.Name} -  {item.Type}");
             }
             int choice = Convert.ToInt32(Console.ReadLine()) - 1;
-            Console.WriteLine("\n");
             return employeeList[choice];
         }
 
