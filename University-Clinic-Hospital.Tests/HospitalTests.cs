@@ -16,13 +16,5 @@ namespace University_Clinic_Hospital.Tests
             Assert.True(0 != sut.employeeList.Count);
         }
 
-        [Fact]
-        public void PayEmployee_Changes_SalaryPaid_To_True()
-        {
-            
-        }
-
-
-
     }
 }

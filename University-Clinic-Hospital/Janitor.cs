@@ -16,7 +16,7 @@ namespace University_Clinic_Hospital
             Sweeping = false;
         }
 
-        public void ChangeSweepingBehavior(Janitor selectedJanitor)
+        public void ChangeSweepingBehavior(Employee selectedJanitor)
         {
             if (selectedJanitor.Sweeping == false)
             {

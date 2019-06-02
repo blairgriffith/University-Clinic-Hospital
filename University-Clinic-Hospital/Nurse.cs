@@ -19,6 +19,7 @@ namespace University_Clinic_Hospital
         public override void DrawBlood(Patient patient)
         {
             patient.BloodLevel -= 5;
+            base.DrawBlood(patient);
         }
 
         public override void CareForPatient(Patient patient)
@@ -27,6 +28,7 @@ namespace University_Clinic_Hospital
             if (NumberOfPatients < 2)
             {
                 NumberOfPatients++;
+                base.CareForPatient(patient);
             }
         }
     }

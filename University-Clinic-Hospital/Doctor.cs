@@ -4,7 +4,7 @@ using System.Text;
 
 namespace University_Clinic_Hospital
 {
-    class Doctor : Employee
+    class Doctor : MedicalEmployee
     {
         public string Specialty { get; set; }
 
@@ -17,14 +17,18 @@ namespace University_Clinic_Hospital
             Specialty = specialty;
         }
 
-        public void DrawBlood(Patient patient)
+        
+
+        public override void DrawBlood(Patient patient)
         {
             patient.BloodLevel -= 2;
+            base.DrawBlood(patient);
         }
 
-        public void CareForPatient(Patient patient)
+        public override void CareForPatient(Patient patient)
         {
             patient.HealthLevel += 3;
+            base.CareForPatient(patient);
         }
     }
 }

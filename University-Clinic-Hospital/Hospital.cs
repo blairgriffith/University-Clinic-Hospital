@@ -57,9 +57,18 @@ namespace University_Clinic_Hospital
             //{
             //    Console.WriteLine($"{janitor.Name} {janitor.EmployeeNumber} {janitor.SalaryPaid}");
             //}
-
+            Console.WriteLine("\n");
         }
 
+        public void ListPatients()
+        {
+            foreach (Patient patient in patientList)
+            {
+                Console.WriteLine($" {patient.Name} {patient.HealthLevel} {patient.BloodLevel}");
+   
+            }
+            Console.WriteLine("\n");
+        }
         public void PayEmployees()
         {
             if (employeeList[0].SalaryPaid == true)
@@ -74,6 +83,7 @@ namespace University_Clinic_Hospital
                 }
                 Console.WriteLine("Employees have been paid.\n");
             }
+            Console.WriteLine("\n");
         }
 
         public Employee ChooseEmployee()
@@ -86,6 +96,7 @@ namespace University_Clinic_Hospital
                 Console.WriteLine($"{e}. {item.Name}");
             }
             int choice = Convert.ToInt32(Console.ReadLine()) - 1;
+            Console.WriteLine("\n");
             return employeeList[choice];
         }
 
@@ -99,6 +110,7 @@ namespace University_Clinic_Hospital
                 Console.WriteLine($"{p}. {item.Name}");
             }
             int choice = Convert.ToInt32(Console.ReadLine()) - 1;
+            Console.WriteLine("\n");
             return patientList[choice];
         }
 
