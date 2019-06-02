@@ -6,7 +6,6 @@ namespace University_Clinic_Hospital
 {
     class Menu
     {
-        Menu menu = new Menu();
         Doctor doctor = new Doctor("", 0, "");
         Nurse nurse = new Nurse("", 0);
         Receptionist receptionist = new Receptionist("", 0);
@@ -31,7 +30,7 @@ namespace University_Clinic_Hospital
             Console.WriteLine("\n                             Clinic Hospital Employee Management Software\n\n");
             do
             {
-                switch (menu.MainMenu())
+                switch (MainMenu())
                 {
                     case 1:
                         hospital.ListEmployees();
