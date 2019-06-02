@@ -24,6 +24,10 @@ namespace University_Clinic_Hospital
         public override void CareForPatient(Patient patient)
         {
             patient.HealthLevel += 7;
+            if (NumberOfPatients < 2)
+            {
+                NumberOfPatients++;
+            }
         }
     }
 }

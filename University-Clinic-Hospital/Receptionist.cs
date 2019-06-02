@@ -15,6 +15,14 @@ namespace University_Clinic_Hospital
             Salary = "$45,000";
             OnPhone = false;
         }
+        public void EndPhoneCall(Receptionist receptionist)
+        {
+            if (receptionist.OnPhone == false)
+            {
+                receptionist.OnPhone = true;
+                Console.WriteLine($"Receptionist has ended phone call");
+            }
 
+        }
     }
 }

@@ -29,8 +29,8 @@ namespace University_Clinic_Hospital
         }
         
         public List<Patient> patientList = new List<Patient>();
-        Patient gerald = new Patient();
-        Patient geraldine = new Patient();
+        Patient gerald = new Patient("Gerald");
+        Patient geraldine = new Patient("Geraldine");
         
         public void AddPatientsToList()
         {
@@ -79,14 +79,27 @@ namespace University_Clinic_Hospital
         public Employee ChooseEmployee()
         {
             Console.WriteLine("Please select an employee from the list:");
-            int i = 0;
+            int e = 0;
             foreach (Employee item in employeeList)
             {
-                i++;
-                Console.WriteLine($"{i}. {item.Name}");
+                e++;
+                Console.WriteLine($"{e}. {item.Name}");
             }
             int choice = Convert.ToInt32(Console.ReadLine()) - 1;
             return employeeList[choice];
+        }
+
+        public Patient ChoosePatient()
+        {
+            Console.WriteLine("Please select a patient from the list:");
+            int p = 0;
+            foreach (Patient item in patientList)
+            {
+                p++;
+                Console.WriteLine($"{p}. {item.Name}");
+            }
+            int choice = Convert.ToInt32(Console.ReadLine()) - 1;
+            return patientList[choice];
         }
 
     }

@@ -16,5 +16,19 @@ namespace University_Clinic_Hospital
             Sweeping = false;
         }
 
+        public void ChangeSweepingBehavior(Janitor selectedJanitor)
+        {
+            if (selectedJanitor.Sweeping == false)
+            {
+                selectedJanitor.Sweeping = true;
+                Console.WriteLine($"{selectedJanitor.Name} is now sweeping.");
+            }
+            else if (selectedJanitor.Sweeping == true)
+            {
+                selectedJanitor.Sweeping = false;
+                Console.WriteLine($"{selectedJanitor.Name} has stopped sweeping.");
+            }
+        }
+
     }
 }
