@@ -30,7 +30,7 @@ namespace University_Clinic_Hospital
                 base.CareForPatient(patient, employee);
             }
             string trimmed = employee.Name.Trim(' ');
-            Console.WriteLine($"{trimmed} is now taking care of {employee.NumberofPatients} patients.");
+            Console.WriteLine($"{trimmed} is now taking care of {employee.NumberofPatients} patients.\n");
         }
     }
 }

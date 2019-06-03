@@ -20,14 +20,15 @@ namespace University_Clinic_Hospital
             hospital.AddPatientsToList();
             Console.WriteLine("Welcome to University Clinic Hospital");
             Console.WriteLine("                                                                                                     ");
-            Console.WriteLine("   ###    ###  #####   ###  ###  ###   ###  ########  ########   ######    ###   #######  ###     ###");
-            Console.WriteLine("   ###    ###  ######  ###  ###  ###   ###  ########  ###   ##  ########   ###   #######   ###   ### ");
-            Console.WriteLine("   ###    ###  ### ### ###  ###  ###   ###  ###       ###   ##  ##         ###     ###      #######  ");
-            Console.WriteLine("   ###    ###  ### ### ###  ###   ### ###   ######    #######   ########   ###     ###        ###    ");
-            Console.WriteLine("   ###    ###  ###  ######  ###    ## ##    ###       ########        ###  ###     ###        ###    ");
-            Console.WriteLine("    ########   ###   #####  ###     ###     ########  ###   ##  ########   ###     ###        ###    ");
-            Console.WriteLine("     #####     ###     ###  ###      #      ########  ###   ##   #####     ###     ###        ###    ");
-            Console.WriteLine("\n                             Clinic Hospital Employee Management Software\n\n");
+            Console.WriteLine("   ###    ###  #####   ###  ###  ###   ###  ########  #########   ######    ###   #######  ###     ###");
+            Console.WriteLine("   ###    ###  ######  ###  ###  ###   ###  ########  ###   ###  ########   ###   #######   ###   ### ");
+            Console.WriteLine("   ###    ###  ### ### ###  ###  ###   ###  ###       ###   ###  ##         ###     ###      #######  ");
+            Console.WriteLine("   ###    ###  ### ### ###  ###   ### ###   ######    ########   ########   ###     ###        ###    ");
+            Console.WriteLine("   ###    ###  ###  ######  ###    ## ##    ###       #########        ###  ###     ###        ###    ");
+            Console.WriteLine("    ########   ###   #####  ###     ###     ########  ###   ###  ########   ###     ###        ###    ");
+            Console.WriteLine("     #####     ###     ###  ###      #      ########  ###   ###   #####     ###     ###        ###    ");
+            Console.WriteLine("\n                                       Clinic Hospital\n\n" +
+                              "                                 Employee Management Software\n\n");
             do
             {
                 switch (MainMenu())
@@ -59,7 +60,7 @@ namespace University_Clinic_Hospital
                               "2. Pay Employees\n" +
                               "3. List Patients\n" +
                               "4. Choose Employee for Task\n" +
-                              "5. Exit Program");
+                              "5. Exit Program\n");
             int menuChoice = Convert.ToInt32(Console.ReadLine());
             return menuChoice;
         }
