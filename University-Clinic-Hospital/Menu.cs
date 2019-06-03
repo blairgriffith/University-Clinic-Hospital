@@ -18,7 +18,6 @@ namespace University_Clinic_Hospital
         {
             hospital.AddEmployeesToList();
             hospital.AddPatientsToList();
-            Console.WriteLine("Welcome to University Clinic Hospital");
             Console.WriteLine("                                                                                                     ");
             Console.WriteLine("   ###    ###  #####   ###  ###  ###   ###  ########  #########   ######    ###   #######  ###     ###");
             Console.WriteLine("   ###    ###  ######  ###  ###  ###   ###  ########  ###   ###  ########   ###   #######   ###   ### ");
